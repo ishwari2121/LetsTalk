@@ -75,7 +75,7 @@ const UpdateGroupChatModal = ({ fetchMessages, fetchAgain, setFetchAgain }) => {
         },
       };
       const { data } = await axios.put(
-        `https://deployapi-ub0q.onrender.com/api/chat/rename`,
+        `http://localhost:5000/api/chat/rename`,
         {
           chatId: selectedChat._id,
           chatName: groupChatName,
@@ -133,7 +133,7 @@ const UpdateGroupChatModal = ({ fetchMessages, fetchAgain, setFetchAgain }) => {
         },
       };
       const { data } = await axios.put(
-        `https://deployapi-ub0q.onrender.com/api/chat/groupadd`,
+        `http://localhost:5000/api/chat/groupadd`,
         {
           chatId: selectedChat._id,
           userId: user1._id,
@@ -177,9 +177,7 @@ const UpdateGroupChatModal = ({ fetchMessages, fetchAgain, setFetchAgain }) => {
       },
     };
     const { data } = await axios.put(
-      `https://deployapi-ub0q.onrender.com/api/chat/groupremove`,
-   
-      
+      `http://localhost:5000/api/chat/groupremove`,
       {
         chatId: selectedChat._id,
         userId: user1._id,
